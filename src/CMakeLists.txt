@@ -296,3 +296,19 @@ ecm_qt_install_logging_categories(
     FILE networkmanagerqt.categories
     DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
 )
+
+ecm_add_installed_library_check(KF6NetworkManagerQt
+    PACKAGE_NAME "KF6NetworkManagerQt"
+    PACKAGE_TARGET_NAMESPACE "KF6::"
+)
+
+ecm_installed_library_check_include_strings(KF6NetworkManagerQt
+    HEADERS
+        ${NetworkManagerQt_CamelCase_HEADERS}
+        ${NetworkManagerQt_SETTINGS_CamelCase_HEADERS}
+    PREFIX NetworkManagerQt
+)
+
+ecm_installed_library_check_version_preprocessor_macros(KF6NetworkManagerQt
+    PREFIX NETWORKMANAGERQT
+)

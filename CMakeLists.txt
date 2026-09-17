@@ -33,6 +33,7 @@ include(ECMGenerateHeaders)
 include(ECMQtDeclareLoggingCategory)
 include(ECMQmlModule)
 include(ECMGenerateQDoc)
+include(ECMInstalledLibraryCheck)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX NETWORKMANAGERQT
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/networkmanagerqt_version.h"
